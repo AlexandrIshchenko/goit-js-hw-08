@@ -21,10 +21,11 @@ function onFormSubmit(e) {
     if (input.value === "" || textarea.value === "") {
         return alert(`All fields must be filled !`);
     };
-    console.log('Send form');
     e.currentTarget.reset();
     localStorage.removeItem(LOCAL_STORAGE_KEY);
     console.log(data);
+    data.email = '';
+    data.message = '';
 };
 
 function onTextareaInput(e) {
