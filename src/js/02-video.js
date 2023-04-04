@@ -6,8 +6,7 @@ const player = new Player(iframe);
 const LOCAL_STORAGE_KEY = 'videoplayer-current-time';
 
 const onPlay = function (data) {
-  const second = Number(data.seconds);
-  const roundetTime = Math.round(second);
+  const roundetTime = Math.round(data.seconds);
   localStorage.setItem(LOCAL_STORAGE_KEY, roundetTime);
 };
 
